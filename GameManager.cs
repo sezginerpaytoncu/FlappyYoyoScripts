@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        if(score >= PlayerPrefs.GetInt("HighScore", 0))
+        if(score >= PlayerPrefs.GetInt("HighScore", 0) && score > 0)
             ScoreText.text = "New High Score!\nScore: " + score.ToString();
         if (score > PlayerPrefs.GetInt("HighScore5", 0))
             HighScoreManager.UpdateHighScores(score);
